@@ -1,13 +1,31 @@
+<div align="center">
+
 # 🤖 AI Helpdesk Agent
 
-[![Python](https://img.shields.io/badge/Python-3.11%2B-blue?style=flat&logo=python)](https://www.python.org/)
-[![Google Gemini](https://img.shields.io/badge/Google_Gemini-google--genai-orange?style=flat&logo=google)](https://ai.google.dev/)
-[![NumPy](https://img.shields.io/badge/NumPy-Vector_Search-013243?style=flat&logo=numpy)](https://numpy.org/)
-[![Naan Mudhalvan](https://img.shields.io/badge/Naan_Mudhalvan-Project-purple?style=flat)](https://www.naanmudhalvan.tn.gov.in/)
+### 🛠️ AI-Powered Technical Troubleshooting
 
-> An AI-powered technical troubleshooting assistant that combines an AI Agent, Retrieval-Augmented Generation (RAG), and real-time system diagnostic tools to diagnose common computer and technical problems.
+**Diagnose • Retrieve • Analyze • Resolve**
 
-Developed for the **Naan Mudhalvan** Skill Development Program.
+<br>
+
+<img src="https://skillicons.dev/icons?i=python" height="50"/>
+<img src="https://skillicons.dev/icons?i=google" height="50"/>
+<img src="https://skillicons.dev/icons?i=numpy" height="50"/>
+<img src="https://skillicons.dev/icons?i=git" height="50"/>
+
+<br><br>
+
+<img src="https://img.shields.io/badge/AI%20Agent-4285F4?style=for-the-badge&logo=google&logoColor=white"/>
+<img src="https://img.shields.io/badge/RAG-7B61FF?style=for-the-badge&logo=databricks&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tools-00A67E?style=for-the-badge&logo=probot&logoColor=white"/>
+
+<br><br>
+
+**An intelligent helpdesk agent that combines AI reasoning,
+knowledge retrieval, and real-time system diagnostics.**
+
+</div>
+
 
 ---
 
@@ -104,6 +122,7 @@ ai-helpdesk-agent/
 ```
 
 ---
+
 
 ## ⚙️ Installation & Setup
 
