@@ -1,0 +1,51 @@
+===================================================================
+TOPIC: Windows Update Failure & Error Codes (0x80070002, 0x800f081f)
+CATEGORY: Operating System
+===================================================================
+Symptoms:
+Windows Update gets stuck at 0% or 99%, or fails during reboot with 'Undoing changes'.
+
+Possible Causes:
+- Corrupted SoftwareDistribution update download cache
+- Background Intelligent Transfer Service (BITS) or Cryptographic service failure
+
+Diagnostic Steps & Resolution:
+1. Run Windows Update Troubleshooter in Settings.
+2. Reset Windows Update Cache:
+   - Open Command Prompt as Administrator.
+   - Run: net stop wuauserv
+   - Run: net stop bits
+   - Run: ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
+   - Run: net start wuauserv
+   - Run: net start bits
+3. Run Component Store & System File Repair:
+   - Open CMD as Admin: Run DISM /Online /Cleanup-Image /RestoreHealth
+   - Followed by: sfc /scannow
+
+
+===================================================================
+TOPIC: System Startup & Boot Problems (BSOD, Automatic Repair Loop)
+CATEGORY: Operating System
+===================================================================
+Symptoms:
+Computer boots repeatedly into 'Automatic Repair' screen or displays Blue Screen of Death stop codes.
+
+Diagnostic Steps & Resolution:
+1. Repair Boot Configuration Data (BCD):
+   - On Automatic Repair screen -> Advanced options -> Troubleshoot -> Command Prompt.
+   - Run: bootrec /fixmbr
+   - Run: bootrec /fixboot
+   - Run: bootrec /rebuildbcd
+2. Uninstall Recent Quality/Feature Updates.
+
+
+===================================================================
+TOPIC: Missing System DLL Files & Driver Related Crashes
+CATEGORY: Operating System
+===================================================================
+Symptoms:
+Error 'VCRUNTIME140.dll missing' or BSOD with DRIVER_IRQL_NOT_LESS_OR_EQUAL.
+
+Diagnostic Steps & Resolution:
+1. Run System File Checker: Open CMD as Admin, run sfc /scannow to restore official system DLLs.
+2. Roll back or update GPU/Network drivers in Device Manager (Win+X -> Device Manager).

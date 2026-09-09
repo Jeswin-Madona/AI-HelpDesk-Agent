@@ -1,0 +1,69 @@
+===================================================================
+TOPIC: WiFi Connected But No Internet Access
+CATEGORY: Network
+===================================================================
+Symptoms:
+Device displays 'Connected, no internet'. Web browsers report DNS_PROBE_FINISHED_NO_INTERNET or 'Server IP address could not be found'.
+
+Possible Causes:
+- Unresponsive or misconfigured DNS server
+- Modem/Router WAN connection failure to ISP
+- Corrupted TCP/IP stack or expired DHCP IP address lease
+- Active VPN or proxy blocking outbound web traffic
+
+Diagnostic Steps & Resolution:
+1. Flush DNS Cache and Reset IP Configuration:
+   - Open Command Prompt as Administrator.
+   - Run: ipconfig /flushdns
+   - Run: ipconfig /release followed by ipconfig /renew
+   - Run: netsh winsock reset to restore Windows socket defaults, then reboot.
+2. Change DNS Servers to Public Providers:
+   - Open Network Connections -> Right-click Wi-Fi -> Properties -> IPv4.
+   - Set Preferred DNS to 8.8.8.8 (Google) or 1.1.1.1 (Cloudflare).
+   - Set Alternate DNS to 8.8.4.4 or 1.0.0.1.
+3. Power Cycle Network Hardware:
+   - Unplug modem and router power cords for 60 seconds.
+   - Reconnect modem first (wait 2 minutes), then plug in Wi-Fi router.
+
+When to Escalate:
+If all modem WAN indicator lights remain red/amber after power cycling, contact your Internet Service Provider (ISP).
+
+
+===================================================================
+TOPIC: Slow Internet Speed & High Latency
+CATEGORY: Network
+===================================================================
+Symptoms:
+Video buffering, high ping during gaming/VoIP calls, downloads significantly slower than subscribed speed.
+
+Possible Causes:
+- 2.4 GHz Wi-Fi frequency channel congestion
+- Background downloads (Windows Updates, cloud backups, torrents)
+- Router CPU bottleneck or outdated firmware
+
+Diagnostic Steps & Resolution:
+1. Switch to 5 GHz or 6 GHz Wi-Fi Frequency Band:
+   - 5 GHz offers higher throughput and less interference from microwave ovens and Bluetooth devices.
+2. Terminate Bandwidth-Hogging Background Tasks:
+   - Open Task Manager -> Processes -> Sort by Network usage.
+   - Close steam/epic game launchers and cloud syncing tools.
+3. Change Router Wireless Channel:
+   - Access router admin page (192.168.1.1) and set 2.4 GHz channel to 1, 6, or 11.
+
+
+===================================================================
+TOPIC: Ethernet Connection Failure
+CATEGORY: Network
+===================================================================
+Symptoms:
+Ethernet cable plugged in but status reads 'Unidentified Network' or 'Cable Unplugged'.
+
+Possible Causes:
+- Damaged RJ45 cable or bent connector pins
+- Network adapter disabled in operating system
+- Router LAN port failure
+
+Diagnostic Steps & Resolution:
+1. Verify physical link LEDs on RJ45 port (solid green link and blinking amber activity light).
+2. Swap Ethernet cable with a Cat5e or Cat6 cable.
+3. Toggle Network Adapter: Press Win+R, run ncpa.cpl, right-click Ethernet, select Disable, then Enable.
