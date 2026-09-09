@@ -1,0 +1,4 @@
+google-genai>=2.22.0
+python-dotenv>=1.0.1
+numpy>=1.26.4
+psutil>=6.1.1

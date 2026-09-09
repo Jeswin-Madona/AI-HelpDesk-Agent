@@ -1,0 +1,46 @@
+===================================================================
+TOPIC: Application Crashing or Unexpectedly Closing
+CATEGORY: Software
+===================================================================
+Symptoms:
+Application (e.g. Chrome, Photoshop, Word, VS Code) abruptly closes after launching or shows 'Application Error'.
+
+Possible Causes:
+- Corrupted user preferences/cache folder
+- Missing Visual C++ Redistributable or .NET Framework runtimes
+- Conflict with third-party extensions/plugins
+
+Diagnostic Steps & Resolution:
+1. Check Windows Event Viewer: Press Win+R, type eventvwr.msc -> Windows Logs -> Application -> Filter for Error.
+2. Repair Microsoft Visual C++ Redistributables:
+   - Go to Settings -> Installed Apps -> Find Visual C++ Redistributable (2015-2022) -> Click Modify -> Repair.
+3. Reset App Preferences:
+   - Press Win+R, type %appdata% and rename application configuration folder to force fresh defaults.
+4. Reinstall Application from official vendor site.
+
+
+===================================================================
+TOPIC: Software Application Not Opening or Launching
+CATEGORY: Software
+===================================================================
+Symptoms:
+Double-clicking application icon yields spinning wheel briefly, then GUI fails to open. Error 0xc000007b.
+
+Diagnostic Steps & Resolution:
+1. Open Task Manager and end lingering background instances of the application.
+2. Exclude application folder in Windows Defender Real-Time Protection exclusions.
+3. Right-click application shortcut -> Properties -> Compatibility -> Select 'Run as administrator'.
+
+
+===================================================================
+TOPIC: Software Installation Failure (Error 1603)
+CATEGORY: Software
+===================================================================
+Symptoms:
+Installer wizard fails mid-way with 'Installation Aborted' or 'Error 1603'.
+
+Diagnostic Steps & Resolution:
+1. Restart computer to clear pending reboot update locks.
+2. Restart Windows Installer Service:
+   - Open CMD as Admin, run msiexec /unregister followed by msiexec /regserver.
+3. Use Microsoft Program Install and Uninstall Troubleshooter tool.
