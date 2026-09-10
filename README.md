@@ -181,6 +181,37 @@ ai-helpdesk-agent/
 - **Flow**: User Input ➔ Agent Guardrail ➔ Off-topic query detected ➔ Politely redirects user to technical troubleshooting topics.
 
 ---
+## 📸 Project Screenshots
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+### 🤖 AI Helpdesk Agent
+
+![AI Helpdesk Agent](https://github.com/Jeswin-Madona/AI-HelpDesk-Agent/blob/340064b092cb81ff882709e3479b8a84730ad2b7/screenshots/Helper%20Agent.png)
+
+**Console-based AI technical support assistant**
+
+</td>
+
+<td align="center" width="50%">
+
+### 🔍 AI-Powered Diagnosis
+
+![AI Diagnosis and Troubleshooting](https://github.com/Jeswin-Madona/AI-HelpDesk-Agent/blob/340064b092cb81ff882709e3479b8a84730ad2b7/screenshots/Diagnosis.png)
+
+**RAG + System Diagnostics + Troubleshooting**
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
 
 ## 🎓 Project Credits
 
